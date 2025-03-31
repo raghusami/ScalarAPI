@@ -27,5 +27,30 @@ This repository demonstrates a **.NET Core API** implementation using **Basic Au
 
 ### 1️⃣ Clone the Repository  
 ```bash
-git clone https://github.com/yourusername/ScalarAPI.git
+git clone https://github.com/raghusami/ScalarAPI.git
 cd ScalarAPI
+```
+### 2️⃣ Run the API:
+```bash
+dotnet run
+```
+### 3️⃣ Access API Documentation:
+Open your browser and navigate to:
+```bash
+http://localhost:47630/scalar/v1
+```
+### 🏗 API Versioning
+This API implements versioning using Asp.Versioning.
+By default, API version v1.0 is set, and versioning is managed via media type headers.
+
+### 🔐 Authentication
+Uses Basic Authentication (username:password encoded in Base64).
+Include the Authorization header in API requests:
+```bash
+Authorization: Basic {base64(username:password)}
+```
+## ⭐ Star the Repository!
+If you find this project useful, **give it a star ⭐ on GitHub!**
+
+---
+📌 **Created by [Raghu](https://github.com/raghusami)**
