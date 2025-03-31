@@ -1,0 +1,70 @@
+# 🛒 ECommerce Microservices
+
+## 🚀 Overview
+This project is a **Microservices-based E-Commerce System** built using **.NET 8.0** with **JWT authentication** and event-driven communication via **RabbitMQ**. It consists of multiple independent services that work together through an **API Gateway**.
+
+## 🏗️ Microservices Architecture
+The system follows a **Distributed Microservices Pattern** with **RabbitMQ for messaging** and **Docker Compose for container orchestration**.
+
+### 🔹 **Core Services:**
+✔ **Identity Service** - Handles authentication & user management (JWT-based).  
+✔ **Product Service** - Manages product catalog & inventory.  
+✔ **Order Service** - Processes customer orders.  
+✔ **Payment Service** - Manages payment transactions.  
+✔ **API Gateway** - Serves as a single entry point for all services.  
+✔ **Message Broker (RabbitMQ)** - Enables asynchronous communication.  
+✔ **Distributed Logging (Seq & Zipkin)** - Tracks service logs and traces API requests.
+
+## 📌 Tech Stack
+- **Backend:** .NET 8.0 (ASP.NET Core Web API)
+- **Authentication:** JWT (JSON Web Tokens)
+- **Messaging System:** RabbitMQ
+- **API Gateway:** Ocelot
+- **Database:** SQL Server
+- **Logging & Monitoring:** Seq, Zipkin
+- **Containerization:** Docker & Docker Compose
+
+## 🔥 Getting Started
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/raghusami/ECommerceMicroservices.git
+cd ECommerceMicroservices
+```
+
+### 2️⃣ Run Services with Docker Compose
+Ensure **Docker Desktop** is installed and running. Then, execute:
+```bash
+docker-compose up -d
+```
+This will start all services, including **RabbitMQ, Zipkin, Seq, Identity, Product, Order, Payment, and API Gateway**.
+
+### 3️⃣ Access Services
+- **API Gateway:** `http://localhost:5000`
+- **Identity Service:** `http://localhost:5001`
+- **Product Service:** `http://localhost:5003`
+- **Order Service:** `http://localhost:5005`
+- **Payment Service:** `http://localhost:5007`
+- **RabbitMQ UI:** `http://localhost:15672` (User: guest, Password: guest)
+- **Seq Logging UI:** `http://localhost:5341`
+- **Zipkin Tracing UI:** `http://localhost:9411`
+
+## 📌 API Documentation
+Swagger is enabled for each service. You can access API documentation at:
+```bash
+http://localhost:{SERVICE_PORT}/swagger/index.html
+```
+
+## 🎯 Key Features
+✔ **Microservices Architecture** with independent services.  
+✔ **JWT-based Authentication & Authorization.**  
+✔ **Event-Driven Communication using RabbitMQ.**  
+✔ **Centralized API Gateway with Ocelot.**  
+✔ **Distributed Logging & Tracing using Seq & Zipkin.**  
+✔ **Docker-Compose for seamless deployment.**  
+
+## ⭐ Star the Repository!
+If you find this project useful, **give it a star ⭐ on GitHub!**
+
+---
+📌 **Created by [Raghu](https://github.com/raghusami)**
